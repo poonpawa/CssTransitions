@@ -1,0 +1,56 @@
+$colors: (
+    primary: #2e2f31,
+    secondary: #909192,
+    accent: #eeeded
+);
+
+body,
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: map-get($colors, accent);
+
+    .bg1 {
+        clip-path: polygon(0 0, 67% 0, 42% 100%, 0 100%);
+        background-color: map-get($colors, primary);
+        height: 100vh;
+    }
+
+    .pattern1 {
+        clip-path: polygon(70% 0, 66% 0, 42% 100%, 46% 100%);
+        background-color: map-get($colors, secondary);
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    section {
+        #tab {
+            background-color: map-get($colors, primary);
+            border-radius: 10px;
+            width: 650px;
+            height: 450px;
+            -webkit-box-shadow: 8px 13px 8px 0px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 8px 13px 8px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 8px 13px 8px 0px rgba(0, 0, 0, 0.5);
+            margin: 10% 5%;
+            transition: transform ease-out 0.2s;
+        }
+
+        .text-content {
+            font-family: sans-serif;
+            font-size: 1.5rem;
+            color: #2e2f31;
+            position: relative;
+            left: 55%;
+            width: fit-content;
+            transition: transform ease-out 0.2s;
+        }
+    }
+}
